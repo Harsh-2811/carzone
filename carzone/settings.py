@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'krc++24l7-co_c(qq4g133+bw4q)p%-89xb5x9l@u!#gjuf6z_'
+SECRET_KEY = os.environ['Carzon_SecretKey']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -98,9 +98,9 @@ DATABASES = {
 
         'NAME': 'CarApp',
 
-        'USER': 'HarshPatel',
+        'USER': 'postgres',
 
-        'PASSWORD': '281199',
+        'PASSWORD': 'Harsh@2811',
 
         'HOST': 'localhost',
 
