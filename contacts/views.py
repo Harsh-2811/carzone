@@ -5,6 +5,9 @@ from django.contrib.auth.models import User
 # Create your views here.
 def inquiry(request):
     if request.method == "POST":
+        if not request.user.is_authenticated:
+            messages.error(request,'Please Make Login First')
+            return redirect('Cars')
         car_id = request.POST['car_id']
         car_title=request.POST['car_title']
         user_id=request.POST['user_id']
