@@ -27,9 +27,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'krc++24l7-co_c(qq4g133+bw4q)p%-89xb5x9l@u!#gjuf6z_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['frozen-fortress-04738.herokuapp.com']
+ALLOWED_HOSTS = ['frozen-fortress-04738.herokuapp.com','*']
 
 
 # Application definition
@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ckeditor',
     'django.contrib.humanize',
+    'import_export',
 'django.contrib.sites',
 'allauth',   # <--
  'allauth.account',   # <--
@@ -110,8 +111,9 @@ DATABASES = {
 
     }
 }
-
 """
+
+
 DATABASES = {
 'default': dj_database_url.config(default='postgres://postgres:Harsh@2811@localhost/CarApp')
 }
