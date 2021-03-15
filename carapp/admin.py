@@ -1,8 +1,9 @@
 from django.contrib import admin
 from django.utils.html import format_html
+from import_export.admin import ImportExportModelAdmin
 # Register your models here.
 from .models import Team,ContactForm
-class TeamAdmin(admin.ModelAdmin):
+class TeamAdmin(ImportExportModelAdmin):
     def thumbnail(self,object):
         return format_html('<img src="{}" width="40" style="border-radius:50px">'.format(object.photo.url))
     thumbnail.short_description = "Profile Image"
