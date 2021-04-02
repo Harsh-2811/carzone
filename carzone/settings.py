@@ -93,7 +93,7 @@ WSGI_APPLICATION = 'carzone.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-"""
+
 DATABASES = {
 'default': {
 
@@ -101,9 +101,9 @@ DATABASES = {
 
         'NAME': 'CarApp',
 
-        'USER': 'postgres',
+        'USER': 'username',
 
-        'PASSWORD': 'Harsh@2811',
+        'PASSWORD': 'password',
 
         'HOST': 'localhost',
 
@@ -111,12 +111,13 @@ DATABASES = {
 
     }
 }
+
+
 """
-
-
 DATABASES = {
 'default': dj_database_url.config(default='postgres://postgres:Harsh@2811@localhost/CarApp')
 }
+"""
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
@@ -155,9 +156,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+#STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
-
+STATICFILES_DIRS=[
+    os.path.join(BASE_DIR,'static'),
+    "/projects/carzone/static/",
+]
 
 SITE_ID=1
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
