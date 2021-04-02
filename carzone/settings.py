@@ -93,7 +93,7 @@ WSGI_APPLICATION = 'carzone.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
+"""
 DATABASES = {
 'default': {
 
@@ -101,7 +101,7 @@ DATABASES = {
 
         'NAME': 'CarApp',
 
-        'USER': 'username',
+        'USER': 'postgres',
 
         'PASSWORD': 'password',
 
@@ -112,12 +112,11 @@ DATABASES = {
     }
 }
 
-
 """
 DATABASES = {
 'default': dj_database_url.config(default='postgres://postgres:Harsh@2811@localhost/CarApp')
 }
-"""
+
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
