@@ -114,7 +114,7 @@ DATABASES = {
 
 """
 DATABASES = {
-'default': dj_database_url.config(default='postgres://postgres:Harsh@2811@localhost/CarApp')
+'default': dj_database_url.config(default='postgres://harsh:665MLzWOe253viw2SLoreEHESFOsc6mW@dpg-cj8ru6ekntus7388kt30-a/carapp')
 }
 
 # Password validation
